@@ -1,11 +1,11 @@
-care_home_id,care_home_name,region,local_authority,care_home_type,bed_capacity,occupancy_rate,current_residents,cqc_rating,opened_date
-HM001,Rosewood Residence,South West,Gloucestershire,Specialist Care,55,0.78,43,Good,2011-08-30
-HM002,Dawson Care Centre,South West,Gloucestershire,Residential,31,0.78,24,Good,2021-09-27
-HM003,Henry Gardens Care Home,London,Ealing,Nursing,48,0.84,40,Good,2005-03-14
-HM004,Bradley Street Care Home,South East,Berkshire,Residential,47,0.97,46,Good,1992-08-25
-HM005,Warner Care Home,South East,Hampshire,Residential and Nursing,25,0.91,23,Outstanding,2013-10-17
-HM006,Meadow Residence,London,Newham,Dementia,44,0.9,40,Inadequate,2016-02-26
-HM007,Cox Lodge,West Midlands,Birmingham,Nursing,68,0.79,54,Good,2015-12-11
-HM008,Brookside House,South East,Oxfordshire,Residential and Nursing,41,0.86,35,Good,2008-06-27
-HM009,Riverside House,London,Croydon,Residential,61,0.94,57,Requires Improvement,1994-09-30
-HM010,Kaur Residence,South East,Oxfordshire,Dementia,47,0.96,45,Good,2021-06-30
+care_home_id,care_home_name,region,local_authority,care_home_type,turnover_profile,bed_capacity,occupancy_rate,current_residents,cqc_rating,opened_date
+HM001,Ashgrove Residence,South East,Berkshire,Residential,Stable,48,0.78,37,Requires Improvement,1989-10-31
+HM002,Dawson Care Centre,South West,Gloucestershire,Specialist Care,Variable,31,0.71,22,Outstanding,2009-08-25
+HM003,Ashgrove House,West Midlands,Warwickshire,Specialist Care,Variable,55,0.88,48,Good,1994-01-06
+HM004,Henry Gardens Lodge,South East,Oxfordshire,Nursing,Moderate,31,0.86,27,Good,1985-04-29
+HM005,Bradley Street Residence,London,Camden,Residential,Moderate,68,0.77,52,Good,2008-08-19
+HM006,Riverside House,South West,Gloucestershire,Dementia,Moderate,49,0.95,47,Good,1986-10-17
+HM007,Sian Streets Residence,West Midlands,Worcestershire,Residential and Nursing,Moderate,65,0.82,53,Requires Improvement,1993-08-19
+HM008,Marie Manors Residence,London,Croydon,Residential,Stable,40,0.85,34,Good,1993-11-13
+HM009,Fernbank House,West Midlands,Birmingham,Dementia,Moderate,60,0.89,53,Requires Improvement,2019-04-06
+HM010,Higgins Care Centre,North West,Cheshire,Dementia,Moderate,78,0.84,66,Good,1997-08-15
