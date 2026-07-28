@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "synthops"
+version = "0.1.0"
+description = "Synthetic operational data generator for analytics, AI prototyping and decision intelligence."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+    { name = "Ibrahim Ajiboye" }
+]
+dependencies = [
+    "pandas",
+    "numpy",
+    "faker"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest"
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]
