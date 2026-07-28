@@ -12,6 +12,7 @@ def generate_id(prefix: str, number: int, width: int = 4) -> str:
 
     Example:
         generate_id("RES", 1) returns "RES0001"
+        generate_id("HM", 1, width=3) returns "HM001"
 
     Args:
         prefix: Short text prefix describing the entity type.
@@ -20,14 +21,22 @@ def generate_id(prefix: str, number: int, width: int = 4) -> str:
 
     Returns:
         A formatted synthetic ID string.
+
+    Raises:
+        ValueError: If prefix is empty, number is less than 1, or width is less than 1.
     """
-    if not prefix:
+    if not prefix or not prefix.strip():
         raise ValueError("prefix cannot be empty")
 
     if number < 1:
         raise ValueError("number must be greater than or equal to 1")
 
-    return f"{prefix.upper()}{number:0{width}d}"
+    if width < 1:
+        raise ValueError("width must be greater than or equal to 1")
+
+    clean_prefix = prefix.strip().upper()
+
+    return f"{clean_prefix}{number:0{width}d}"
 
 
 def generate_ids(prefix: str, count: int, width: int = 4) -> list[str]:
@@ -36,6 +45,7 @@ def generate_ids(prefix: str, count: int, width: int = 4) -> list[str]:
 
     Example:
         generate_ids("STAFF", 3) returns ["STAFF0001", "STAFF0002", "STAFF0003"]
+        generate_ids("HM", 3, width=3) returns ["HM001", "HM002", "HM003"]
 
     Args:
         prefix: Short text prefix describing the entity type.
@@ -44,6 +54,9 @@ def generate_ids(prefix: str, count: int, width: int = 4) -> list[str]:
 
     Returns:
         A list of formatted synthetic ID strings.
+
+    Raises:
+        ValueError: If count is less than 1.
     """
     if count < 1:
         raise ValueError("count must be greater than or equal to 1")
