@@ -33,12 +33,29 @@ The `care_homes` table represents fictional adult social care provider sites.
 | `care_home_name` | Fictional care home name |
 | `region` | UK region |
 | `local_authority` | Local authority linked to the selected region |
-| `care_home_type` | Type of care home, such as Residential, Nursing or Dementia |
+| `care_home_type` | Type of care home, such as Residential, Nursing, Dementia or Specialist Care |
+| `turnover_profile` | Synthetic operational turnover profile used to support resident lifecycle generation |
 | `bed_capacity` | Number of available beds |
-| `occupancy_rate` | Synthetic occupancy percentage |
+| `occupancy_rate` | Synthetic occupancy rate influenced by care home type |
 | `current_residents` | Estimated current residents based on bed capacity and occupancy |
 | `cqc_rating` | Fictional quality-rating-style category |
 | `opened_date` | Fictional opening date |
+
+### Scenario Controls
+
+The care home generator supports configurable scenario inputs.
+
+Example:
+
+```python
+generate_care_homes(
+    number_of_homes=1,
+    care_home_type="Dementia",
+    turnover_profile="High",
+    id_prefix="HM",
+    id_width=3,
+    seed=42,
+)
 
 ## Configurable ID Format
 
