@@ -59,6 +59,10 @@ Planned tables:
 - Configurable turnover profile
 - Type-influenced occupancy behaviour
 - Synthetic sample CSV output
+- Time-aware adult social care resident lifecycle generation
+- Configurable dataset start and end dates for resident lifecycle data
+- Active, discharged and deceased resident records
+- Resident records linked to generated care homes
 - Automated tests with `pytest`
 
 ---
@@ -67,17 +71,26 @@ Planned tables:
 
 ```python
 from synthops.domains.adult_social_care.care_homes import generate_care_homes
+from synthops.domains.adult_social_care.residents import generate_residents
 
 care_homes = generate_care_homes(
     number_of_homes=10,
-    care_home_type="Dementia",
-    turnover_profile="High",
     id_prefix="HM",
     id_width=3,
     seed=42,
 )
 
+residents = generate_residents(
+    care_homes=care_homes,
+    dataset_start_date="2020-01-01",
+    dataset_end_date="2024-12-31",
+    id_prefix="RES",
+    id_width=5,
+    seed=42,
+)
+
 print(care_homes.head())
+print(residents.head())
 ```
 
 ---
@@ -152,10 +165,21 @@ Run the example script:
 python examples/generate_adult_social_care_sample.py
 ```
 
-This creates a sample CSV file at:
+Current Adult Social Care sample outputs:
 
-```text
-data/sample/adult_social_care/care_homes.csv
+- `data/sample/adult_social_care/care_homes.csv`
+- `data/sample/adult_social_care/residents.csv`
+
+The `residents` output includes:
+
+- `resident_id`
+- `care_home_id`
+- `date_of_birth`
+- `gender`
+- `admission_date`
+- `exit_date`
+- `exit_reason`
+- `status_at_dataset_end`
 ```
 
 ---
