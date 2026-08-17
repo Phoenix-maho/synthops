@@ -27,6 +27,12 @@ SynthOps is currently in early development and has not yet published a stable re
 - Initial project README.
 - Architecture documentation.
 - Project roadmap.
+- Adult Social Care `residents` lifecycle generator.
+- Time-aware resident generation using `dataset_start_date` and `dataset_end_date`.
+- Active, discharged and deceased resident lifecycle records.
+- Resident records linked to generated care homes.
+- Sample `residents.csv` output.
+- Tests for resident lifecycle rules, date validity, care home references and turnover-driven historical resident counts.
 
 ### Changed
 
@@ -47,6 +53,8 @@ SynthOps is currently in early development and has not yet published a stable re
 - Added responsible-use language to clarify that SynthOps generates fictional data for learning, analytics development and prototyping.
 - Added architecture guidance explaining the separation between core utilities and domain modules.
 - Added roadmap phases covering repository foundation, generator implementation, open-source product management and engineering maturity.
+- Updated Adult Social Care documentation to describe the implemented resident lifecycle generator.
+- Updated example generation script to output both care homes and residents.
 
 ---
 

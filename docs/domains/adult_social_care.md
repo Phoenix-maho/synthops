@@ -19,10 +19,10 @@ The Adult Social Care module is in early development.
 Current implemented table:
 
 - `care_homes`
+- `residents`
 
 Planned tables:
 
-- `residents`
 - `resident_care_needs_history`
 - `staff`
 - `shifts`
@@ -181,15 +181,15 @@ The current `care_homes` generator applies these rules:
 
 ---
 
-## Planned Table: `residents`
+## Current Table: `residents`
 
-The planned `residents` table will represent resident lifecycle records.
+The `residents` table represents fictional resident lifecycle records linked to generated care homes.
 
-It should not represent only residents active at a single point in time.
+It includes residents whose stay overlaps the generated dataset period, rather than only residents active at a single point in time.
 
-Instead, it should represent residents who passed through a care home during a generated dataset period.
+This allows the Adult Social Care module to support historical analysis, admissions, exits, turnover, length-of-stay calculations and future care-needs history.
 
-Planned columns:
+Implemented columns:
 
 | Column | Description |
 |---|---|
@@ -204,6 +204,23 @@ Planned columns:
 
 The residents table will avoid unnecessary personal identifiers such as full names, addresses, phone numbers, NHS numbers or next-of-kin details.
 
+### Implemented Resident Rules
+
+The current resident lifecycle generator applies these rules:
+
+- every resident links to a valid care home
+- resident IDs are unique
+- active resident counts match `care_homes.current_residents`
+- active residents have no `exit_date`
+- active residents have no `exit_reason`
+- inactive residents have an `exit_date`
+- inactive residents have an `exit_reason`
+- `exit_date` is after `admission_date`
+- `exit_date` is on or before `dataset_end_date`
+- `date_of_birth` is before `admission_date`
+- residents are adults at admission
+- resident stays overlap the generated dataset period
+- historical resident volume is influenced by bed capacity, turnover profile, dataset length and random variation
 ---
 
 ## Planned Table: `resident_care_needs_history`
@@ -312,8 +329,9 @@ The Adult Social Care module is still in early development.
 
 Current limitations:
 
-- only `care_homes` is implemented
-- resident lifecycle generation is not implemented yet
+Current limitations:
+
+- only `care_homes` and `residents` are implemented
 - care-needs history is not implemented yet
 - staff, shifts, incidents, observations and handovers are planned but not implemented
 - assumptions are synthetic and not sector benchmarks
