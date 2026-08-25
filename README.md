@@ -12,7 +12,14 @@ The project helps analysts, analytics engineers, BI developers, data scientists,
 
 SynthOps is currently in early development.
 
-Version 1 starts with an **Adult Social Care** domain module and will later expand into other operational domains such as finance operations, construction operations, SaaS metrics and workforce analytics.
+Version `0.1.0` establishes the initial open-source project foundation and the first Adult Social Care generation capabilities.
+
+Current implemented Adult Social Care tables:
+
+- `care_homes`
+- `residents`
+
+The project is not yet a stable `1.0` release.
 
 ---
 
