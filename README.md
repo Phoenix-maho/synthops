@@ -134,6 +134,18 @@ synthops/
 
 ---
 
+## Documentation
+
+Key project documentation:
+
+- [Architecture](ARCHITECTURE.md)
+- [Roadmap](ROADMAP.md)
+- [Changelog](CHANGELOG.md)
+- [Adult Social Care Domain Notes](docs/domains/adult_social_care.md)
+- [Adult Social Care Data Dictionary](docs/domains/adult_social_care_data_dictionary.md)
+
+---
+
 ## Installation for Local Development
 
 Create and activate a virtual environment:

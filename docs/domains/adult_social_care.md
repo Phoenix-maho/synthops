@@ -32,6 +32,12 @@ Planned tables:
 
 ---
 
+## Related Documentation
+
+- [Adult Social Care Data Dictionary](adult_social_care_data_dictionary.md)
+
+---
+
 ## Current Table: `care_homes`
 
 The `care_homes` table represents fictional adult social care provider sites.
