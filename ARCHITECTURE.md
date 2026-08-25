@@ -56,6 +56,16 @@ SynthOps
 
 ---
 
+## Architecture Diagrams
+
+Supporting diagrams:
+
+- [High-Level Architecture Diagram](docs/diagrams/high_level_architecture.md)
+- [Adult Social Care Data Flow Diagram](docs/diagrams/adult_social_care_data_flow.md)
+- [Adult Social Care Table Relationship Diagram](docs/diagrams/adult_social_care_relationships.md)
+
+---
+
 ## Repository Structure
 
 ```text

@@ -35,6 +35,8 @@ Planned tables:
 ## Related Documentation
 
 - [Adult Social Care Data Dictionary](adult_social_care_data_dictionary.md)
+- [Adult Social Care Data Flow Diagram](../diagrams/adult_social_care_data_flow.md)
+- [Adult Social Care Table Relationship Diagram](../diagrams/adult_social_care_relationships.md)
 
 ---
 
