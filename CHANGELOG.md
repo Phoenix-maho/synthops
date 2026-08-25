@@ -56,6 +56,7 @@ SynthOps is currently in early development and has not yet published a stable re
 - Updated Adult Social Care documentation to describe the implemented resident lifecycle generator.
 - Updated example generation script to output both care homes and residents.
 - Added Adult Social Care data dictionary documenting implemented tables, columns, relationships, valid values and data quality rules.
+- Added high-level architecture, Adult Social Care data flow and Adult Social Care table relationship diagrams.
 
 ---
 
